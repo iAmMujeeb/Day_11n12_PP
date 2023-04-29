@@ -8,12 +8,13 @@ public class DeckOfCards {
 
         String[] rank = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
 
+        String[][] player = new String[suit.length][rank.length];
+
         for (int k=1; k<5; k++) {
             System.out.println("Player "+k+" has Cards => ");
-            String[][] player = new String[suit.length][rank.length];
             for (int i = 0; i < 9; i++) {
                 int randomSuit = (int) (Math.random() * 10) % 4;
-                int randomRank = (int) (Math.random() * 10) % 13;
+                int randomRank = (int) (Math.random() * 100) % 13;
                 player[randomSuit][randomRank] = rank[randomRank];
                 switch (randomSuit) {
                     case 0:
